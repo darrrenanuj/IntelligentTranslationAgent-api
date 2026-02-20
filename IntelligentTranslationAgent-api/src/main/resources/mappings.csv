@@ -1,0 +1,12 @@
+﻿Source Field, Target Field, Transformation, Notes
+id,userId,Direct,Customer ID
+first_name,firstName,Direct,First name
+last_name,lastName,Direct,Last name
+email_address,email,Direct,Email address
+phone_number,phone,Remove hyphens,Phone without formatting
+date_of_birth,dob,Format YYYY-MM-DD,Date of birth
+salary,annualCompensation,Multiply by 1.12,12% annual increase
+country_code,country,Lookup table,Convert code to full name
+is_active,status,If true→ACTIVE; false→INACTIVE,Convert flag to status
+created_timestamp,createdAt,ISO 8601 format,Creation timestamp
+department_code,department,Direct,Department code

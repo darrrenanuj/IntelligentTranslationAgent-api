@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Customer Source Schema",
+  "type": "object",
+  "properties": {
+    "cust_id": {
+      "type": "string",
+      "description": "Customer ID"
+    },
+    "fname": {
+      "type": "string",
+      "description": "First name"
+    },
+    "lname": {
+      "type": "string",
+      "description": "Last name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[0-9\\-]+$"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date"
+    },
+    "salary_amt": {
+      "type": "number"
+    },
+    "dept_code": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["cust_id", "fname", "lname", "email"]
+}

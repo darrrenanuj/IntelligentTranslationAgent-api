@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Customer Target Schema",
+  "type": "object",
+  "properties": {
+    "customerId": {
+      "type": "string",
+      "description": "Unique customer identifier"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string",
+      "format": "email"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date"
+    },
+    "annualSalary": {
+      "type": "number"
+    },
+    "department": {
+      "type": "string"
+    },
+    "accountStatus": {
+      "type": "string",
+      "enum": ["ACTIVE", "INACTIVE"]
+    },
+    "registrationDate": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["customerId", "firstName", "lastName", "emailAddress"]
+}

@@ -1,0 +1,253 @@
+2026-02-19 21:04:04,147 INFO c.t.SpringBootStarter [main] Spring Boot Starter
+2026-02-19 21:04:04,649 INFO c.t.SpringBootStarter [main] Starting SpringBootStarter using Java 25.0.1 with PID 16640 (/Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main/target/classes started by anujsridharan in /Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main)
+2026-02-19 21:04:04,657 DEBUG c.t.SpringBootStarter [main] Running with Spring Boot v3.1.0, Spring v6.0.9
+2026-02-19 21:04:04,659 INFO c.t.SpringBootStarter [main] No active profile set, falling back to 1 default profile: "default"
+2026-02-19 21:04:06,714 INFO c.t.a.TranslationAgent [main] Resources loaded
+
+2026-02-19 21:04:07,233 INFO c.t.SpringBootStarter [main] Started SpringBootStarter in 3.002 seconds (process running for 4.097)
+2026-02-19 21:04:25,436 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] ALGORITHM DOWNLOAD
+2026-02-19 21:04:25,441 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 1) Generating algorithm ID: ALGO_CUSTOMER_TRANSFORMER_1771556665436
+2026-02-19 21:04:25,441 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 2) Algorithm Name: customer_transformer
+2026-02-19 21:04:25,441 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 3) Downloaded by: john.admin@company.com
+2026-02-19 21:04:25,441 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 4️⃣  Calling Claude to generate algorithm...
+
+2026-02-19 21:04:26,305 ERROR c.t.a.TranslationAgent [http-nio-8080-exec-1] Error downloading algorithm: 401: {type=error, error={type=authentication_error, message=x-api-key header is required}, request_id=req_011CYJaZgE3trbU3KSoRnBU6}
+com.anthropic.errors.UnauthorizedException: 401: {type=error, error={type=authentication_error, message=x-api-key header is required}, request_id=req_011CYJaZgE3trbU3KSoRnBU6}
+	at com.anthropic.errors.UnauthorizedException$Builder.build(UnauthorizedException.kt:74) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:50) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:37) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageServiceImpl$WithRawResponseImpl.create(MessageServiceImpl.kt:111) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageServiceImpl.create(MessageServiceImpl.kt:51) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageService.create(MessageService.kt:45) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.translation.agent.TranslationAgent.downloadAlgorithm(TranslationAgent.java:189) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) [spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.8.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2026-02-19 21:08:31,618 INFO c.t.SpringBootStarter [main] Spring Boot Starter
+2026-02-19 21:08:32,157 INFO c.t.SpringBootStarter [main] Starting SpringBootStarter using Java 25.0.1 with PID 16783 (/Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main/target/classes started by anujsridharan in /Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main)
+2026-02-19 21:08:32,164 DEBUG c.t.SpringBootStarter [main] Running with Spring Boot v3.1.0, Spring v6.0.9
+2026-02-19 21:08:32,166 INFO c.t.SpringBootStarter [main] No active profile set, falling back to 1 default profile: "default"
+2026-02-19 21:08:34,222 INFO c.t.a.TranslationAgent [main] Resources loaded
+
+2026-02-19 21:08:34,740 INFO c.t.SpringBootStarter [main] Started SpringBootStarter in 3.033 seconds (process running for 4.115)
+2026-02-19 21:08:43,157 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] ALGORITHM DOWNLOAD
+2026-02-19 21:08:43,162 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 1) Generating algorithm ID: ALGO_CUSTOMER_TRANSFORMER_1771556923158
+2026-02-19 21:08:43,162 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 2) Algorithm Name: customer_transformer
+2026-02-19 21:08:43,162 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 3) Downloaded by: john.admin@company.com
+2026-02-19 21:08:43,162 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 4️⃣  Calling Claude to generate algorithm...
+
+2026-02-19 21:08:44,039 ERROR c.t.a.TranslationAgent [http-nio-8080-exec-1] Error downloading algorithm: 401: {type=error, error={type=authentication_error, message=x-api-key header is required}, request_id=req_011CYJatg8NzMJ8qnBUD3d6P}
+com.anthropic.errors.UnauthorizedException: 401: {type=error, error={type=authentication_error, message=x-api-key header is required}, request_id=req_011CYJatg8NzMJ8qnBUD3d6P}
+	at com.anthropic.errors.UnauthorizedException$Builder.build(UnauthorizedException.kt:74) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:50) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:37) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageServiceImpl$WithRawResponseImpl.create(MessageServiceImpl.kt:111) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageServiceImpl.create(MessageServiceImpl.kt:51) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageService.create(MessageService.kt:45) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.translation.agent.TranslationAgent.downloadAlgorithm(TranslationAgent.java:189) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) [spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.8.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2026-02-19 21:10:49,021 INFO c.t.SpringBootStarter [main] Spring Boot Starter
+2026-02-19 21:10:49,535 INFO c.t.SpringBootStarter [main] Starting SpringBootStarter using Java 25.0.1 with PID 16870 (/Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main/target/classes started by anujsridharan in /Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main)
+2026-02-19 21:10:49,544 DEBUG c.t.SpringBootStarter [main] Running with Spring Boot v3.1.0, Spring v6.0.9
+2026-02-19 21:10:49,546 INFO c.t.SpringBootStarter [main] No active profile set, falling back to 1 default profile: "default"
+2026-02-19 21:10:51,607 INFO c.t.a.TranslationAgent [main] Resources loaded
+
+2026-02-19 21:10:52,148 INFO c.t.SpringBootStarter [main] Started SpringBootStarter in 3.042 seconds (process running for 4.141)
+2026-02-19 21:10:57,966 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] ALGORITHM DOWNLOAD
+2026-02-19 21:10:57,971 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 1) Generating algorithm ID: ALGO_CUSTOMER_TRANSFORMER_1771557057967
+2026-02-19 21:10:57,971 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 2) Algorithm Name: customer_transformer
+2026-02-19 21:10:57,971 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 3) Downloaded by: john.admin@company.com
+2026-02-19 21:10:57,971 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 4️⃣  Calling Claude to generate algorithm...
+
+2026-02-19 21:10:58,811 ERROR c.t.a.TranslationAgent [http-nio-8080-exec-1] Error downloading algorithm: 401: {type=error, error={type=authentication_error, message=x-api-key header is required}, request_id=req_011CYJb4cLT51jZ96jp2LWGF}
+com.anthropic.errors.UnauthorizedException: 401: {type=error, error={type=authentication_error, message=x-api-key header is required}, request_id=req_011CYJb4cLT51jZ96jp2LWGF}
+	at com.anthropic.errors.UnauthorizedException$Builder.build(UnauthorizedException.kt:74) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:50) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:37) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageServiceImpl$WithRawResponseImpl.create(MessageServiceImpl.kt:111) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageServiceImpl.create(MessageServiceImpl.kt:51) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.anthropic.services.blocking.MessageService.create(MessageService.kt:45) ~[anthropic-java-core-2.14.0.jar:2.14.0]
+	at com.translation.agent.TranslationAgent.downloadAlgorithm(TranslationAgent.java:189) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) [spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.8.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+2026-02-19 21:18:53,104 INFO c.t.SpringBootStarter [main] Spring Boot Starter
+2026-02-19 21:18:53,621 INFO c.t.SpringBootStarter [main] Starting SpringBootStarter using Java 25.0.1 with PID 17217 (/Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main/target/classes started by anujsridharan in /Users/anujsridharan/Downloads/SpringBoot-Serverless-Api-G-main)
+2026-02-19 21:18:53,630 DEBUG c.t.SpringBootStarter [main] Running with Spring Boot v3.1.0, Spring v6.0.9
+2026-02-19 21:18:53,631 INFO c.t.SpringBootStarter [main] No active profile set, falling back to 1 default profile: "default"
+2026-02-19 21:18:55,450 INFO c.t.a.TranslationAgent [main] Resources loaded
+
+2026-02-19 21:18:55,977 INFO c.t.SpringBootStarter [main] Started SpringBootStarter in 2.785 seconds (process running for 3.902)
+2026-02-19 21:19:03,141 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] ALGORITHM DOWNLOAD
+2026-02-19 21:19:03,160 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] 1) Generating algorithm ID: ALGO_CUSTOMER_TRANSFORMER_1771557543146
+2026-02-19 21:19:03,160 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] 2) Algorithm Name: customer_transformer
+2026-02-19 21:19:03,161 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] 3) Downloaded by: john.admin@company.com
+2026-02-19 21:19:03,161 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] 4️⃣  Calling Claude to generate algorithm...
+
+2026-02-19 21:19:46,756 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] 5️⃣  Algorithm generated (0 chars)
+
+2026-02-19 21:19:46,774 INFO c.t.a.TranslationAgent [http-nio-8080-exec-2] Algorithm stored with ID: ALGO_CUSTOMER_TRANSFORMER_1771557543146
+2026-02-19 21:20:11,186 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] Begin Transformation
+2026-02-19 21:20:11,189 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] 1️⃣  Using algorithm: ALGO_CUSTOMER_TRANSFORMER_1771557543146
+2026-02-19 21:20:11,190 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] Algorithm name: customer_transformer
+2026-02-19 21:20:11,190 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] Executing transformation locally
+2026-02-19 21:20:11,190 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] Input data: {id=C12345, first_name=John, last_name=Doe, email_address=john.doe@example.com, phone_number=555-123-4567, date_of_birth=1990-05-15, salary=50000, country_code=SALES, is_active=false, created_timestamp=2024-01-15T10:30:00Z}
+2026-02-19 21:20:11,192 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] Transformation complete (6ms)
+2026-02-19 21:20:11,193 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] Output data: {firstName=John, lastName=Doe, country=SALES, createdAt=2024-01-15T10:30:00Z, phone=5551234567, dob=1990-05-15, annualCompensation=56000.00000000001, department=null, userId=C12345, email=john.doe@example.com, status=INACTIVE}
+2026-02-19 21:20:11,193 INFO c.t.a.TranslationAgent [http-nio-8080-exec-3] TRANSFORMATION COMPLETE
+
+2026-02-19 21:28:24,575 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] ALGORITHM DOWNLOAD
+2026-02-19 21:28:24,577 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 1) Generating algorithm ID: ALGO_CUSTOMER_TRANSFORMER_1771558104577
+2026-02-19 21:28:24,577 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 2) Algorithm Name: customer_transformer
+2026-02-19 21:28:24,577 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 3) Downloaded by: john.admin@company.com
+2026-02-19 21:28:24,578 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 4️⃣  Calling Claude to generate algorithm...
+
+2026-02-19 21:29:04,196 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] 5️⃣  Algorithm generated (0 chars)
+
+2026-02-19 21:29:04,199 INFO c.t.a.TranslationAgent [http-nio-8080-exec-1] Algorithm stored with ID: ALGO_CUSTOMER_TRANSFORMER_1771558104577
+2026-02-19 21:29:49,518 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] Begin Transformation
+2026-02-19 21:29:49,520 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] 1️⃣  Using algorithm: ALGO_CUSTOMER_TRANSFORMER_1771558104577
+2026-02-19 21:29:49,520 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] Algorithm name: customer_transformer
+2026-02-19 21:29:49,521 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] Executing transformation locally
+2026-02-19 21:29:49,521 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] Input data: {id=C12345, first_name=John, last_name=Doe, email_address=john.doe@example.com, phone_number=555-123-4567, date_of_birth=1990-05-15, salary=50000, country_code=SALES, is_active=false, created_timestamp=2024-01-15T10:30:00Z}
+2026-02-19 21:29:49,523 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] Transformation complete (4ms)
+2026-02-19 21:29:49,525 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] Output data: {firstName=John, lastName=Doe, country=SALES, createdAt=2024-01-15T10:30:00Z, phone=5551234567, dob=1990-05-15, annualCompensation=56000.00000000001, department=null, userId=C12345, email=john.doe@example.com, status=INACTIVE}
+2026-02-19 21:29:49,525 INFO c.t.a.TranslationAgent [http-nio-8080-exec-6] TRANSFORMATION COMPLETE
+

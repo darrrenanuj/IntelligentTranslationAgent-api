@@ -1,0 +1,172 @@
+{
+  "info": {
+    "_postman_id": "ccfa7cc9-600a-4747-b3e9-8be6621994c3",
+    "name": "IntelligentTranslationAgent-api",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52322862",
+    "_collection_link": "https://go.postman.co/collection/52322862-ccfa7cc9-600a-4747-b3e9-8be6621994c3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Step1: download-algorithm",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Admin-User",
+            "value": "john.admin@company.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "algorithmName",
+              "value": "customer_transformer",
+              "type": "text",
+              "uuid": "9fa63b6b-73fe-4eed-8914-9dfa1f8faacf"
+            },
+            {
+              "key": "user",
+              "value": "john.admin@company.com",
+              "type": "text",
+              "uuid": "93139aa8-3813-4286-8213-0feddc62da55"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/rest/admin/download-algorithm",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "admin",
+            "download-algorithm"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Step2: Translate",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "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",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"C12345\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email_address\": \"john.doe@example.com\",\n  \"phone_number\": \"555-123-4567\",\n  \"date_of_birth\": \"1990-05-15\",\n  \"salary\": 50000,\n  \"country_code\": \"SALES\",\n  \"is_active\": false,\n  \"created_timestamp\": \"2024-01-15T10:30:00Z\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/rest/transform",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "transform"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Algorithms",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/rest/admin/algorithms",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "admin",
+            "algorithms"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    }
+  ]
+}
